@@ -1,0 +1,17 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    # FileChooser widget to choose an image file
+    FileChooserIconView:
+        id: filechooser
+        on_selection: app.upload_image()
+
+    # Label to display result after image is processed
+    Label:
+        id: result_label
+        text: "Select an image for plant identification."
+
+    # Button to trigger image upload
+    Button:
+        text: "Upload Image"
+        on_press: app.upload_image()
